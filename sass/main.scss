@@ -1,0 +1,35 @@
+
+//MAIN 
+@import "base";
+@import "typography";
+@import "fonts";
+
+//ABSTARCT
+@import "abstract/cirlce";
+@import "abstract/effects";
+@import "abstract/gridpositions";
+
+//COMPONENS
+@import "componens/swiper";
+@import "componens/button";
+@import "componens/navigation";
+@import "componens/popup";
+
+
+// SECTIONS
+@import "sections/featured";
+@import "sections/contact";
+@import "sections/packages";
+@import "sections/process";
+@import "sections/reviews";
+
+//LAYOUTS
+@import "layouts/home";
+@import "layouts/header";
+@import "layouts/footer";
+
+
+
+
+
+

@@ -1,0 +1,72 @@
+.btn {
+    background: linear-gradient(270deg, #FF5C00 0%, #FF006B 100%);
+    border-radius: 6px;
+    border:none;
+    width: 25.8rem;
+    height: 5rem;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    @include respond (phone) {
+        width: 21.5rem;
+        height: 3.5rem;
+        font-size: 1.5rem;
+
+
+    }
+
+    & > * {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        transition: all .2s;
+    }
+
+    &__visible {
+        padding: 1.5rem;
+
+        @include respond (phone) {
+            padding: .9rem;
+        }
+    }
+
+    &__invisible {
+        position: absolute;
+        padding: 1.8rem;
+        left: 0;
+        top: -100%;
+
+        @include respond (phone) {
+            display:none;
+        }
+
+        
+    }
+
+    &:hover {
+        background: linear-gradient(270deg, #FF5C00 0%, #FF006B 100%);
+    }
+
+    &:hover &__visible {
+        transform: translateY(100%);
+
+        @include respond (phone) {
+            transform: none;
+                }
+    }
+
+    &:hover &__invisible {
+        top: 0;
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
+    }
+}
+

@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+//HEADER
+
+//HEADER TITLE
+
+h1 {
+    font-size: 500%; // 5rem;
+
+    @include respond (big-desktop-2) {
+        font-size: 600%; 
+    }
+
+    
+    @include respond (phone) {
+        font-size:320%;
+        margin-bottom:2rem;
+
+    }
+}
+
+// TEXT UNDER THE H1 IN THE HEADER'S TITLE
+
+h3 {
+    font-size: 180%; // 1.8rem;
+    letter-spacing: 0.01em;
+    font-weight: 600;
+    line-height: 130%;
+
+    @include respond (phone) {
+        font-size: 160%;
+        margin-top:6px;
+    }
+
+    .color {
+        color:#00b8ff;
+    }
+    
+    .it {
+        font-style: italic;
+    }
+}
+
+h4 {
+    font-size: 160%; // 1.6rem
+    line-height: 130%;
+    text-transform: uppercase;
+    margin-top:3rem;
+    letter-spacing: 1.5px;
+    
+    @include respond (phone) {
+        margin-top:0;
+    }
+
+}
+
+.header_main-services-box-text {
+    @include greyParagraph;
+}
+
+
+/*****************************************************************************************************/
+
+// NAME OF EACH SECTION AT THE TOP OF THE SECTIONS
+
+h2 {
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 600;
+}
+
+// H2 COLOR WHITE (CONTACT FORM)
+.color-white {
+    color: white;
+}
+
+/*****************************************************************************************************/
+
+// OUR WORKS (SECTION 2 AFTER HEADER)
+
+
+.clinet {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #184293;
+    line-height: 19.5px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.name-of-business {
+    font-size: 28px;
+    margin-top: 1px;
+    font-weight: 700;
+    line-height: 42px;
+   
+    @include linearBlue;
+   
+}
+
+.name-of-business-2,
+.name-of-business-text {
+    @include greyParagraph;
+}
+
+.name-of-business-text {
+    line-height: 20px;
+}
+
+.visit-the-website {
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 20px;
+    line-height: 19.5px;
+    display: block;
+    text-transform: uppercase;
+    background-image: linear-gradient(270deg, #FF5C00 0%, #FF006B 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    cursor: pointer;
+
+}
+
+/*****************************************************************************************************/
+
+
+// FEATURED (SECTION 3 AFTER OUR WORKS)
+
+
+.head-number {
+    
+    font-weight: 900;
+    font-size: 4rem;
+    line-height: 6rem;
+    @include linearBlue;
+
+}
+
+.head-text {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 20.8px;
+    letter-spacing: .5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.text-1 {
+    @include greyParagraph;
+
+}
+
+.text-2 {
+    @include greyParagraph;
+
+
+}
+
+/*****************************************************************************************************/
+
+//PACKAGES
+
+.from {
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 1.95rem;
+}
+
+.price {
+    @include linearOrange;
+    font-size: 3rem;
+    line-height: 4.5rem;
+    letter-spacing:3px ;
+    font-weight: bold;
+}
+
+.learnmore {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.9rem;
+    letter-spacing: 0.02em;
+    margin-top: 2rem;
+    text-decoration: underline;
+
+}
+
+/*****************************************************************************************************/
+

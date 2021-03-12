@@ -1,0 +1,94 @@
+.reviews {
+    @include sectionPosition;
+
+    &_main-head {
+        @include mainHeadTextPosition;
+    }
+
+    background-color: $color-main-backgroung;
+
+    &_container {
+
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 7rem;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 10rem;
+
+
+        &_box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &-photo {
+                
+                width: 100%;
+                height: 100%;
+                
+                .img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &-name {
+                margin-top:2rem;
+                font-size: 22px;
+                font-weight: bold;
+                line-height: 150%;
+                letter-spacing: 0.01em;
+                text-align: center;
+
+                @include linearBlue;
+            }
+
+            &-filed {
+                margin-top: 5px;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 150%;
+                letter-spacing: 0.03em;
+                text-align: center;
+            }
+
+            &-website {
+                font-weight: 400;
+                font-size: 1.5rem;
+                line-height: 150%;
+                text-transform: uppercase;
+                text-align: center;
+            }
+
+            &-text {
+               // width: 25rem;
+                margin-top: 2.8rem;
+                position: relative;
+                font-weight: 400;
+                font-size: 1.5rem;
+                line-height: 150%;
+                span {
+                    @include linearOrange;
+                    font-weight: 600;
+                }
+
+                &::before {
+                    content: "\201C";
+                    top:0;
+                    left: -3px;
+                    font-size: 5.3rem;
+                    position: absolute;
+                    color: rgba(255, 0, 122, 0.2);
+                }
+            }
+
+
+        }
+
+
+    }
+
+
+}

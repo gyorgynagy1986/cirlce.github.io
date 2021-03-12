@@ -1,0 +1,320 @@
+.contact {
+    @include sectionPosition;
+    background: linear-gradient(270deg, rgba(255, 92, 0, 0.8) 0%, rgba(255, 0, 107, 0.8) 100%);
+    &_main-head {
+        @include mainHeadTextPosition;
+    }
+
+
+    &_container {
+        width: 70%;
+        display: flex;
+        margin-bottom: 12rem;
+
+        @include respond (phone) {
+            flex-direction: column;
+            width: 85%;
+        }
+
+        &-text {
+            width: 45%;
+            height: 100%;
+
+            @include respond (phone) {
+                width: 100%;
+
+            }
+
+            &-founderbox {
+                width: 80%;
+                height: 22rem;
+                border: 3px solid #FFFFFF;
+                border-radius: 6px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                @include respond (phone) {
+                    width: 100%;
+    
+                }
+    
+
+                .founder {
+
+                    &-name {
+                        font-weight: bold;
+                        font-size: 22px;
+                        line-height: 150%;
+                        color: #FFFFFF;
+                        text-align: center;
+                    }
+
+                     &-position {
+                        font-weight: bold;
+                        margin-top: 5px;
+                        font-size: 14px;
+                        line-height: 150%;
+                        text-transform: uppercase;
+                        color: #FFFFFF;
+                        letter-spacing: 0.2em;
+                        text-align: center;
+                     }
+
+                    &-company {
+                        font-size: 14px;
+                        line-height: 150%;
+                        font-weight:400;
+                        color: #FFFFFF;
+                        letter-spacing: 0.03em;
+                        text-transform: uppercase;
+                        text-align: center;
+                    }
+
+                    &-phonenumber {
+
+                        display: flex;
+                        width: 100%;
+                        justify-content: center;
+                        margin-top: 3rem;
+
+                        img {
+                            margin-right: 2rem;
+                            display: inline-block;
+                        }
+
+                        .number {
+                            font-weight: bold;
+                            font-size: 18px;
+                            line-height: 150%;  
+                            color: #FFFFFF;
+                            text-decoration-line: underline;
+                            font-weight: 700;
+                        }
+
+                    }
+                }
+            
+            }
+
+            &-textbox {
+                width: 80%;
+                margin-top: 6rem;
+
+                @include respond (phone) {
+                    margin-top: 3rem;
+                }
+
+                p {
+                    font-size: 18px;
+                    color: #FFFFFF;
+                }
+
+                .p-2text {
+                    margin-top: 3rem;
+                    
+                    @include respond (phone) {
+                        margin-bottom: 3rem;
+                    }
+                }
+
+            }
+
+        }
+
+
+        &-form {
+            flex:1;
+            height:100%;
+            background-color: #fff;
+            box-shadow: -10px -10px 30px rgba(255, 245, 240, 0.2), 10px 10px 30px rgba(245, 24, 130, 0.64);
+            border-radius: 6px;
+
+            .main-text {
+                margin-top:5rem;
+                margin-bottom: 4rem;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .text-1 {
+                    width: 85%;
+                    font-size: 3rem;
+                    font-weight: 700;
+                    line-height: 130%;
+                    letter-spacing: 0.05em;
+                    color:inherit;
+                    font-family: inherit;
+
+                    span {
+                        @include linearOrange;
+                    }
+                }
+
+            }
+
+
+            .email_form {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .form {     //** THIS IS THE FORM FOR INPUT ELEMENTS **//
+
+                width: 85%;
+
+                &_group {
+                    position: relative;
+                }
+                &_group:not(:last-child) {
+                    margin-bottom:2rem;
+                    position: relative;
+                }
+
+                
+                    &_input {
+                    font-size: 2.5rem;
+                    padding: 1.5rem 4rem;
+                    border: 2px solid rgba(25, 0, 255, 0.438);
+                    border-radius: 6px;
+                    width: 100%;
+                    display: block;
+
+                    &-textbox {
+                        font-size: 2rem;
+                        height: 15rem;
+                        resize: none;
+                    }
+
+                    &::placeholder {
+                        opacity: 0;
+                    }
+
+                    &:focus {
+                        outline: none;
+                        border: 0 1rem 2rem rgba(black, .1);
+                        border-bottom: 3px solid $color-primary;
+                    }
+
+                    &:focus:invalid {
+                        border-bottom: 3px solid orangered;
+                    }
+                    
+                    &::-webkit-input-placeholder {
+                        color: #93183d;
+                    }
+                }
+
+                &_label {
+                    font-size: 1.2rem;
+                    margin-left: 2rem;
+                    margin-top: .7rem;
+                    transition: all .3s;
+                    display: block;
+                    text-transform:uppercase;
+                }
+
+                &_input:placeholder-shown + .form_label {
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(-6rem);
+                }
+            
+
+                
+
+            }
+            
+        }
+
+    }
+
+      //** BUTTON POSITON IN THE FORM! THE MAIN BUTTON SETTING IN THE BUTTON SCSS!! **//
+    
+      .btn-form {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: auto;
+        margin-bottom: 5.5rem;
+       
+        @include respond (phone) {
+            justify-content: center;
+
+        }
+
+      }
+
+    
+
+    //** TEXT ABOVE THE FORM INPUT ELEMENT **//
+
+    &_name {
+        padding:0 1rem;
+        height: 3rem;
+        background-color:#fff;
+        position: absolute;
+        top:-15%;
+        text-align: center;
+        left:5%;
+        font-size: 1.5rem;
+        z-index: 2;
+    }
+
+    &_company {
+        padding:0 1rem;
+        height: 3rem;
+        background-color:#fff;
+        position: absolute;
+        top:-15%;
+        text-align: center;
+        left:5%;
+        font-size: 1.5rem;
+        z-index: 2;
+    }
+
+    &_position {
+        padding:0 1rem;
+        height: 3rem;
+        background-color:#fff;
+        position: absolute;
+        top:-15%;
+        text-align: center;
+        left:5%;
+        font-size: 1.5rem;
+        z-index: 2;
+    }
+
+    &_email {
+        padding:0 1rem;
+        height: 3rem;
+        background-color:#fff;
+        position: absolute;
+        text-align: center;
+        font-size: 1.5rem;
+        z-index: 2;
+        display: block;
+        top:-15%;
+        left:5%;
+
+    }
+    
+    &_message {
+        padding:0 1rem;
+        height: 3rem;
+        background-color:#fff;
+        position: absolute;
+        text-align: center;
+        font-size: 1.5rem;
+        z-index: 2;
+        display: block;
+        top:-8%;
+        left:5%;
+
+    }
+
+}

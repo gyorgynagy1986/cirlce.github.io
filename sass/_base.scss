@@ -1,0 +1,109 @@
+
+
+@mixin sectionPosition {    
+
+    height:100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin linearBlue {
+    background-image: linear-gradient(265.45deg, #7000FF -35.65%, #00B2FF 69.11%, #00D0DD 142.99%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@mixin linearOrange {
+    background-image: linear-gradient(270deg, #FF5C00 0%, #FF006B 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@mixin greyParagraph {
+    font-size: 1.4rem;
+    color: rgba(111, 111, 111, 1);
+    line-height: 22.5px;
+    font-weight: 300;
+}
+
+@mixin circlehalf {
+    border-top-left-radius: 110px;  
+    border-top-right-radius: 110px; 
+    border: 3px solid #184293;
+    border-bottom: 0;
+}
+
+@mixin mainHeadTextPosition {
+    width: 75%;
+    margin-top: 9rem;
+    margin-bottom: 7rem;
+}
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content };    //600px
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { @content };     //900px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content };    //1200px
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (max-width: 100em) { @content };    //1600px
+    }
+
+    @if $breakpoint == big-desktop-2 {
+        @media only screen and (min-width: 112.5em) { @content };    //1800
+    }
+}
+
+
+// COLOR VARIABLES
+$color-primary: rgba(24, 66, 147, 1);
+$color-main-backgroung: rgba(167, 223, 255, 0.2);
+$color-secondary-backgroung: #ffff;
+
+
+// FONT VARIABLES
+$font-primary: 'Roboto', sans-serif;
+$font-display: 'Roboto', sans-serif;
+$font-display-1: 'Roboto', sans-serif;
+
+//MARGINS //MAINLY FOR BUTTONS POSITIONING
+
+.margin-bottom-big {
+    margin-bottom: 10.5rem;
+    
+    @include respond (phone) {
+        margin-bottom: 5rem;
+
+    }
+
+}
+.margin-top-big {margin-top: 10.5rem;}
+.margin-top-middle {
+    margin-top: 5.5rem;
+    @include respond (phone) {
+        margin-top: auto;
+    }
+
+}
+.margin-top-middle-2 {margin-top: 5.5rem;}
+
+
+
+
+
+/* .container {
+    display:grid;
+    grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns: [w-start] minmax(4rem, 1fr) [center-start] repeat(8,
+     minmax(min-content, 10rem) ) [center-end] minmax(4rem, 1fr) [w-end];
+
+
+} */
+
+
